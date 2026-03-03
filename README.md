@@ -46,3 +46,10 @@ Aplicația este organizată pe mai multe clase:
 - `Student`
 - `Imprumut`
 - `Configurari`
+
+---
+
+## Tehnologii utilizate
+
+- C#
+- Programare orientată pe obiect (OOP)
