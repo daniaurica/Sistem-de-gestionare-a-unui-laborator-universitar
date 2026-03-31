@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "Model\Model.csproj", "{2E9CAC94-89D8-46C4-AC45-22885F89CAF6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StocareData", "StocareData\StocareData.csproj", "{BE2A2077-597F-4CAD-BD6E-A954BB31725C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemGestionareLaboratorApp", "SistemGestionareLaboratorApp\SistemGestionareLaboratorApp.csproj", "{05C4F892-1CF9-4951-B745-857350B713B3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2E9CAC94-89D8-46C4-AC45-22885F89CAF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E9CAC94-89D8-46C4-AC45-22885F89CAF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E9CAC94-89D8-46C4-AC45-22885F89CAF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E9CAC94-89D8-46C4-AC45-22885F89CAF6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE2A2077-597F-4CAD-BD6E-A954BB31725C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE2A2077-597F-4CAD-BD6E-A954BB31725C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE2A2077-597F-4CAD-BD6E-A954BB31725C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE2A2077-597F-4CAD-BD6E-A954BB31725C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05C4F892-1CF9-4951-B745-857350B713B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05C4F892-1CF9-4951-B745-857350B713B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05C4F892-1CF9-4951-B745-857350B713B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05C4F892-1CF9-4951-B745-857350B713B3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
