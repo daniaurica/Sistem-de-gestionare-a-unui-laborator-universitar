@@ -1,0 +1,61 @@
+﻿<Window x:Class="SistemGestionareLaboratorWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Detalii echipament"
+        Height="450"
+        Width="700"
+        WindowStartupLocation="CenterScreen"
+        Background="#E8F0FE"    >
+
+    <Window.Resources>
+        <SolidColorBrush x:Key="CuloarePrincipala" Color="#1F4E79"/>
+        <SolidColorBrush x:Key="CuloareAccent" Color="#D9EAF7"/>
+
+        <Style TargetType="TextBlock">
+            <Setter Property="FontFamily" Value="Segoe UI"/>
+            <Setter Property="Foreground" Value="#2C3E50"/>
+        </Style>
+    </Window.Resources>
+
+    <Grid Margin="20">
+        <Border Background="White" CornerRadius="12" Padding="20" BorderBrush="#D0D7DE" BorderThickness="1">
+            <StackPanel>
+                <TextBlock Text="Detalii despre echipament"
+                           FontSize="24"
+                           FontWeight="Bold"
+                           Foreground="{StaticResource CuloarePrincipala}"
+                           Margin="0,0,0,20"/>
+
+                <StackPanel Orientation="Horizontal" Margin="0,8">
+                    <TextBlock Text="ID: " FontWeight="Bold" Width="180"/>
+                    <TextBlock x:Name="txtId"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="0,8">
+                    <TextBlock Text="Denumire: " FontWeight="Bold" Width="180"/>
+                    <TextBlock x:Name="txtDenumire"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="0,8">
+                    <TextBlock Text="Tip echipament: " FontWeight="Bold" Width="180"/>
+                    <TextBlock x:Name="txtTip"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="0,8">
+                    <TextBlock Text="Număr total: " FontWeight="Bold" Width="180"/>
+                    <TextBlock x:Name="txtNumarTotal"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="0,8">
+                    <TextBlock Text="Număr disponibil: " FontWeight="Bold" Width="180"/>
+                    <TextBlock x:Name="txtNumarDisponibil"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="0,8">
+                    <TextBlock Text="Opțiuni: " FontWeight="Bold" Width="180"/>
+                    <TextBlock x:Name="txtOptiuni"/>
+                </StackPanel>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>
