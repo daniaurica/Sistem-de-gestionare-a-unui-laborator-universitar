@@ -1,0 +1,175 @@
+﻿<Window x:Class="SistemGestionareLaboratorWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Gestionare Echipamente"
+        Height="650"
+        Width="1000"
+        WindowStartupLocation="CenterScreen"
+        Background="#F4F6F8">
+
+    <Window.Resources>
+
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Padding" Value="10"/>
+            <Setter Property="Background" Value="#1F4E79"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+        </Style>
+
+        <Style TargetType="TextBlock">
+            <Setter Property="FontFamily" Value="Segoe UI"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+
+        <Style TargetType="TextBox">
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Padding" Value="5"/>
+        </Style>
+
+        <Style TargetType="ComboBox">
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+
+    </Window.Resources>
+
+    <Grid Margin="15">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- STANGA -->
+
+        <Border Grid.Column="0"
+                Background="White"
+                CornerRadius="10"
+                Padding="10"
+                Margin="0,0,10,0">
+
+            <StackPanel>
+
+                <TextBlock Text="Lista echipamente"
+                           FontSize="22"
+                           FontWeight="Bold"
+                           Foreground="#1F4E79"/>
+
+                <ListBox x:Name="lstEchipamente"
+                         Height="500"
+                         SelectionChanged="lstEchipamente_SelectionChanged"/>
+
+            </StackPanel>
+
+        </Border>
+
+        <!-- DREAPTA -->
+
+        <ScrollViewer Grid.Column="1">
+
+            <Border Background="White"
+                    CornerRadius="10"
+                    Padding="20">
+
+                <StackPanel>
+
+                    <TextBlock Text="Gestionare echipament"
+                               FontSize="28"
+                               FontWeight="Bold"
+                               Foreground="#1F4E79"/>
+
+                    <TextBlock Text="Denumire"/>
+                    <TextBox x:Name="txtDenumire"/>
+
+                    <TextBlock Text="Număr total"/>
+                    <TextBox x:Name="txtNumarTotal"/>
+
+                    <TextBlock Text="Tip echipament"/>
+
+                    <ComboBox x:Name="cmbTip"
+                              Height="30">
+                        <ComboBoxItem Content="Laptop"/>
+                        <ComboBoxItem Content="Mouse"/>
+                        <ComboBoxItem Content="Tastatura"/>
+                        <ComboBoxItem Content="Monitor"/>
+                    </ComboBox>
+
+                    <TextBlock Text="Opțiuni"/>
+
+                    <WrapPanel Margin="5">
+
+                        <CheckBox x:Name="cbWireless"
+                                  Content="Wireless"
+                                  Margin="10"/>
+
+                        <CheckBox x:Name="cbUSB"
+                                  Content="USB"
+                                  Margin="10"/>
+
+                        <CheckBox x:Name="cbBluetooth"
+                                  Content="Bluetooth"
+                                  Margin="10"/>
+
+                        <CheckBox x:Name="cbHDMI"
+                                  Content="HDMI"
+                                  Margin="10"/>
+
+                    </WrapPanel>
+
+                    <TextBlock Text="Data împrumut"/>
+
+                    <DatePicker x:Name="dpDataImprumut"
+                                Margin="5"
+                                SelectedDate="{x:Static sys:DateTime.Now}"
+                                xmlns:sys="clr-namespace:System;assembly=mscorlib"/>
+
+                    <StackPanel Orientation="Horizontal"
+                                Margin="0,20,0,0">
+
+                        <Button Content="Adaugă"
+                                Width="120"
+                                Click="BtnAdauga_Click"/>
+
+                        <Button Content="Actualizează"
+                                Width="120"
+                                Click="BtnActualizeaza_Click"/>
+
+                    </StackPanel>
+
+                    <TextBlock Text="Căutare după denumire"
+                               Margin="5,20,5,5"/>
+
+                    <StackPanel Orientation="Horizontal">
+
+                        <TextBox x:Name="txtCautare"
+                                 Width="250"/>
+
+                        <Button Content="Caută"
+                                Width="120"
+                                Click="BtnCauta_Click"/>
+
+                    </StackPanel>
+
+                    <Border Background="#F8F9FA"
+                            BorderBrush="#D0D7DE"
+                            BorderThickness="1"
+                            CornerRadius="8"
+                            Padding="15"
+                            Margin="0,20,0,0">
+
+                        <TextBlock x:Name="txtRezultat"
+                                   TextWrapping="Wrap"
+                                   FontSize="15"
+                                   Text="Rezultatul va apărea aici."/>
+
+                    </Border>
+
+                </StackPanel>
+
+            </Border>
+
+        </ScrollViewer>
+
+    </Grid>
+</Window>
